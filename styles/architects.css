@@ -45,6 +45,7 @@
 .bg-light {
     background-color: rgba(255, 144, 14, 0.1);
     max-width: 1920px;
+    
     /* max-height: 1322px; */
 }
 
@@ -70,7 +71,6 @@ main>section {
 }
 
 /* header styles */
-
 /* navbar related syles */
 .navbar {
     justify-content: space-between;
@@ -137,7 +137,48 @@ main>section {
     max-width: 537px;
 }
 
+/* Features you will....Style */
+#feature-section-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.frature-card {
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.f-title {
+    /* semiBold = 600 */
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#badge{
+    padding: 45px 42px;
+    margin-left: -100px;
+    margin-top: -95px;
+}
+#big-text{
+    font-weight: bold;
+    font-size: 65px;
+}
+#normal-text{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.features{
+    gap: 146px;
+}
+.feture-img img{
+    width: 100%;
+}
 /* some facts related styles */
+
 .fact-desceiption {
     margin-bottom: 50px;
 }
@@ -187,13 +228,23 @@ main>section {
 .sponsor-brands img {
     filter: grayscale(100%);
 }
+/* Footer Style */
+.footer-text{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 38px ;
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+}
 
 /* Respnsive Media Query [For Mobile Device] */
 @media screen and (max-width:576px) {
 
     .navbar,
     .nav-link,
-    .teams {
+    .teams,
+    .features {
         flex-direction: column;
     }
 
@@ -206,28 +257,55 @@ main>section {
     .our-features {
         margin-left: 25px;
     }
+    
+    #badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
 
     .facts-container {
         justify-items: center;
         gap: 24px;
     }
-    .sponsor-brands{
+
+    .sponsor-brands {
         justify-items: center;
         gap: 50px;
+    }
+    .footer-text{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
     }
 }
 
 /* Respnsive Media Query [For Medium or Tablet Device] */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .teams {
+    .teams, .features {
         flex-direction: column;
     }
 
     .our-features {
         margin-left: 50px auto;
     }
-    .sponsor-brands, .facts-container{
-        grid-template-columns: repeat(2,1fr);
+    #badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .footer-text{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        text-align: center;
+        padding: 20px ;
+    }
+
+    .sponsor-brands,
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         justify-items: center;
     }
